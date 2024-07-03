@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "montserrat",sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #21193f;
+}
+
+header {
+    height: 40rem;
+    background-size: cover;
+    padding: 2rem;
+    background-image: url('/assets/img/Header.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    gap: 3rem;
+}
+
+header a {
+    transition: all 1s;
+    border-radius: 0.1rem;
+    color: #ffffff;
+}
+
+header a:hover {
+    box-shadow: 0 1px #bbbbbb;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 1200px) {
+    header {
+        height: 30rem;
+    }
+
+    header nav ul {
+        gap: 2rem;
+    }
+
+    .Logo {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 20rem;
+        padding: 1rem;
+    }
+
+    nav img {
+        height: 3rem;
+    }
+
+    header nav ul {
+        gap: 1rem;
+    }
+
+    .Logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 15rem;
+        padding: 0.5rem;
+    }
+    header nav ul {
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .Logo {
+        font-size: 1.2rem;
+    }
+
+    header a {
+        font-size: 0.8rem;
+    }
+}
+
+

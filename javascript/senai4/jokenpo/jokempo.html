@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Jokempô</title>
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #resultados,
+        #resultadoFinal {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jokempô: Pedra, Papel e Tesoura</h1>
+    <div id="opcoes">
+        <button id="pedra">Pedra</button>
+        <button id="papel">Papel</button>
+        <button id="tesoura">tesoura</button>
+    </div>
+    <div id="resultados"></div>
+    <div id="resultadoFinal"></div>
+    <button id="reiniciar">clique aqui para jogar novamente</button>
+
+    <script>
+        const opcoes = ['Pedra', 'Papel', 'Tesoura'];
+        let partidas = 0;
+        let vitoriasUsuario = 0;
+        let vitoriasComputador = 0;
+
+        document.getElementById('pedra').addEventListener('click', () => jogar('Pedra'));
+        document.getElementById('papel').addEventListener('click', () => jogar('Papel'));
+        document.getElementById('tesoura').addEventListener('click', () => jogar('Tesoura'));
+
+        document.getElementById('reiniciar').addEventListener('click', reiniciar);
+
+        function jogar(escolhaUsuario) {
+
+            if (partidas >= 3) {
+                document.getElementById('resultadoFinal').innerHTML =
+                    `Jogo Finalizado!<br>
+                Você ganhou ${vitoriasUsuario} vezes.<br>
+                Computador ganhou ${vitoriasComputador} vezes.`;
+                return;
+            }
+
+            const escolhaComputador = opcoes[Math.floor(Math.random() * opcoes.length)];
+            let resultados = '';
+
+            if (escolhaUsuario == escolhaComputador) {
+                resultados = 'Empate!';
+                document.getElementById(`resultados`).innerHTML += `empatou jogue novamente.<br>`;
+                return;
+            } else if (
+                (escolhaUsuario == 'Pedra' && escolhaComputador === 'Tesoura') ||
+                (escolhaUsuario == 'Papel' && escolhaComputador === 'Pedra') ||
+                (escolhaUsuario == 'Tesoura' && escolhaComputador === 'Papel')
+            ) {
+                resultados = 'Você ganhou!';
+                vitoriasUsuario++;
+            } else {
+                resultados = 'Você perdeu!';
+                vitoriasComputador++;
+            }
+
+            partidas++;
+
+            document.getElementById('resultados').innerHTML +=
+                `Partida ${partidas}:<br>
+            Você escolheu: ${escolhaUsuario}<br>
+            O computador escolheu ${escolhaComputador}<br>
+            <strong>${resultados}</strong><br><br>`;
+
+            if (partidas >= 3) {
+                document.getElementById('resultadoFinal').innerHTML =
+                    `Jogo finalizado! <br>
+                Você ganhou ${vitoriasUsuario} vezes. <br>
+                O computador ganhou ${vitoriasComputador} vezes.`;
+            }
+            function reiniciar() {
+               const partidas = 0;
+               const vitoriasUsuario = 0;
+               const vitoriasComputador = 0;
+                document.getElementById(`resultados`).innerHTML = '';
+                document.getElementById(`resultadoFinal`).innerHTML = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

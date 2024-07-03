@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(360deg, #2b2b2b,rgb(58, 58, 158),rgb(89, 157, 116) ) ;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+  }
+    
+  .bigcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #292a37;
+    border: 1px solid gray;
+    height: 25rem;
+    width: 35rem;
+    border-radius: 2rem;
+    color: azure;
+  }
+
+
+
+  .container input{
+    padding: 1rem;
+    border-radius: 1rem ;
+    border: hidden;
+  }
+
+
+  .container button{
+    border: hidden;
+    padding: 1rem;
+    border-radius: 1rem ;
+    transition: all 1s;
+  }
+  .container button:hover{
+  background-color: #52867e;
+  cursor: pointer;
+  }
+
+

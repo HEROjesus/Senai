@@ -1,0 +1,22 @@
+body{
+    background: linear-gradient(#282a36,#44475c,#1e1f28);
+    height: 100vh;
+    color: rgb(50, 83, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.gdiv{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 5rem;
+    border-radius: 3rem;
+    box-shadow: #1e1f28 0.5rem 0.5rem 0.5rem ;
+}
+
+h1{
+    padding-bottom: 2rem;
+}
