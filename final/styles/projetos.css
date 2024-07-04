@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #080815;
+  color: #ffffff;
+}
+
+header {
+  padding: 2rem;
+  padding-bottom: 10rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  height: 4rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  gap: 3rem;
+}
+
+header a {
+  transition: all 0.3s;
+  border-radius: 0.1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+header a:hover {
+  box-shadow: 0 1px #bbbbbb;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+@media (max-width: 1200px) {
+  header {
+    height: 30rem;
+  }
+
+  header nav ul {
+    gap: 2rem;
+  }
+
+  .Logo {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 20rem;
+    padding: 1rem;
+  }
+
+  nav img {
+    height: 3rem;
+  }
+
+  header nav ul {
+    gap: 1rem;
+  }
+
+  .Logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 15rem;
+    padding: 0.5rem;
+  }
+
+  header nav ul {
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .Logo {
+    font-size: 1.2rem;
+  }
+
+  header a {
+    font-size: 0.8rem;
+  }
+}
+
+header > h2 {
+  font-size: 2rem;
+  padding-top: 2.5rem;
+  color: #fff;
+}
+
+.container{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.up{
+  gap: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  
+}
+.donw{
+  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.box{
+  background-color: #1F2151;
+  border-radius: 1rem;
+  padding: 10rem;
+  border: #2F34AB 0.2px solid;
+  box-shadow: #141534 0 0 1rem;
+}
