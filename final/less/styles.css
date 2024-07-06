@@ -1,4 +1,4 @@
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -9,13 +9,15 @@
 }
 
 body {
-  background-color: #080815;
+  background-color: #21193f;
   color: #ffffff;
 }
 
 header {
+  background-size: cover;
+  background-image: url("/assets/img/Header.png");
+  background-repeat: no-repeat;
   padding: 2rem;
-  padding-bottom: 10rem;
 }
 
 nav {
@@ -112,47 +114,43 @@ header > h2 {
   color: #fff;
 }
 
-.container{
-  width: 100%;
-  padding: 1rem;
+.central {
+  padding-top: 10rem;
   display: flex;
   justify-content: center;
+}
+.central video {
+  border-radius: 2rem;
+  box-shadow: #5540a1 0rem 0rem 1rem 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  .central video {
+    width: 29rem;
+  }
+}
+@media (max-width: 480px) {
+  .central video {
+    width: 20rem;
+  }
+}
+
+main {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.techs {
+  display: flex;
   flex-direction: column;
-  
 }
-.up{
-  gap: 4rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 2rem;
-  
-}
-.donw{
-  gap: 4rem;
+
+.techs ul {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 5rem;
-}
-
-.box{
-  background-color: #1F2151;
-  border-radius: 1rem;
-  padding: 10rem;
-  border: #2F34AB 0.2px solid;
-  box-shadow: #141534 0 0 1rem;
-}
-body::-webkit-scrollbar {
-  width: 12px;               
-}
-
-body::-webkit-scrollbar-track {
-  background: none;        
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color:none;    
-  border-radius: 20px;       
-  border: 3px solid none ;
 }
